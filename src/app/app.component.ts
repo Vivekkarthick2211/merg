@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import {SplashScreen} from '@ionic-native/splash-screen/ngx';
+import {StatusBar} from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,58 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
-}
+
+  currentPageTitle = 'tab1';
+  labels;
+  /*  appPages = [
+     {
+       title: 'Blood Bank',
+       url: '',
+       icon: 'color-fill'
+     },
+     {
+       title: 'Matrimony',
+       url: '/timeline',
+       icon: 'heart-half'
+     },
+     {
+       title: 'Events',
+       url: '/timeline',
+       icon: 'cash'
+     },
+     {
+       title: 'Medical Tips',
+       url: '/timeline',
+       icon: 'medkit'
+     },
+     {
+       title: 'Health Tips',
+       url: '/timeline',
+       icon: 'heart-circle'
+     },
+
+    
+     {
+       title: 'Settings',
+       url: '/settings',
+       icon: 'settings'
+     } 
+   ];*/
+ 
+   constructor(
+     private platform: Platform,
+     private splashScreen: SplashScreen,
+     private statusBar: StatusBar
+   ) {this.initializeApp();
+   }
+ 
+   initializeApp() {
+     this.platform.ready().then(() => {
+       this.statusBar.styleDefault();
+       this.splashScreen.hide();
+       
+     });
+   }
+   
+ }
+

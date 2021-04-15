@@ -12,6 +12,31 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <!-- List of Text Items -->
+<!-- <ion-list>
+  <ion-item>
+    <ion-label></ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item> -->
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+<ion-item>
+  <ion-label>Daily Expenses</ion-label>
+  <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
+   <ion-select-option value="morn">Morning</ion-select-option>
+   <ion-select-option value="afnoon">Afternoon</ion-select-option>
+   <ion-select-option value="eve">Evening</ion-select-option>
+  </ion-select>
+  <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
+    <ion-select-option value="veg">Vegtabels</ion-select-option>
+    <ion-select-option value="gro">Grocery</ion-select-option>
+    <ion-select-option value="oils">Oils</ion-select-option>
+    <ion-select-option value="curry">Curry</ion-select-option>
+    <ion-select-option value="rice">Rice</ion-select-option>
+    <ion-select-option value="egg">Egg</ion-select-option>
+    <ion-select-option value="water">Water</ion-select-option>
+   </ion-select>
+  <ion-input type="number"></ion-input>
+</ion-item>
+<!-- </ion-list> -->
 </ion-content>
